@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 def fizzbuzz():
-
 for X in range(1, 101):
     if X % 15 == 0:
         print("FizzBuzz", end=" ")

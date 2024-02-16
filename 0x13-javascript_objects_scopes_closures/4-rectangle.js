@@ -1,36 +1,27 @@
 #!/usr/bin/node
-class Rectangle {
+
+module.exports = class Rectangle {
   constructor (w, h) {
-    if (w > 0 && h > 0) {
+    if (!(w <= 0 || h <= 0) && w && h) {
       this.width = w;
       this.height = h;
     }
   }
 
-  print (printC = 'X') {
-    let i;
-    let j;
-    let build = '';
-    for (i = 0; i < this.height; i++) {
-      if (i > 0) {
-        build += '\n';
-      }
-      for (j = 0; j < this.width; j++) {
-        build += printC;
-      }
+  print () {
+    for (let i = 0; i < this.height; i++) {
+      console.log('X'.repeat(this.width));
     }
-    console.log(build);
   }
 
   rotate () {
-    let tmp = this.width;
+    const temp = this.width;
     this.width = this.height;
-    this.height = tmp;
+    this.height = temp;
   }
 
   double () {
     this.width *= 2;
     this.height *= 2;
   }
-}
-module.exports = Rectangle;
+};

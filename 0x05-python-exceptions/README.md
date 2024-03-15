@@ -1,15 +1,17 @@
-Why Python programming is awesome
+0x05. PYTHON EXCEPTIONS
 
-What’s the difference between errors and exceptions
+1.Why Python programming is awesome
 
-What are exceptions and how to use them
+2.What’s the difference between errors and exceptions
 
-When do we need to use exceptions
+3.What are exceptions and how to use them
 
-How to correctly handle an exception
+4.When do we need to use exceptions
 
-What’s the purpose of catching exceptions
+5.How to correctly handle an exception
 
-How to raise a builtin exception
+6.What’s the purpose of catching exceptions
 
-When do we need to implement a clean-up action after an exception
+7.How to raise a builtin exception
+
+8.When do we need to implement a clean-up action after an exception

@@ -1,7 +1,5 @@
-OOP is a totally new concept for all of you (especially those who think they know about it :)). It’s VERY important that you read at least all the material that is listed bellow (and skip what we recommend you to skip, you will see them later in the curriculum).
-
-As usual, make sure you type (never copy and paste), test, understand all examples shown in the following links (including those in the video), test again etc. The biggest and most important takeaway of this project is: experiment by yourself OOP, play with it!
-
+Python - Classes and Objects
+General Learning Objectives:
 
 Why Python programming is awesome
 
@@ -22,7 +20,7 @@ What is self
 
 What is a method
 
-What is the special __init__ method and how to use it
+What is the special init method and how to use it
 
 What is Data Abstraction, Data Encapsulation, and Information Hiding
 
@@ -36,7 +34,7 @@ How to dynamically create arbitrary new attributes for existing instances of a c
 
 How to bind attributes to object and classes
 
-What is the __dict__ of a class and/or instance of a class and what does it contain
+What is and what does contain dict of a class and of an instance of a class
 
 How does Python find the attributes of an object or class
 

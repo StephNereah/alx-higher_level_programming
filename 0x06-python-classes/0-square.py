@@ -2,7 +2,7 @@
 
 """This module defines a Square class."""
 
+
 class Square:
-    """Class Square that defines a square.
-    """
+    """Class Square that defines a square."""
     pass

@@ -8,26 +8,32 @@ def matrix_divided(matrix, div):
     divides all elements of a matrix, elements must be ->
         int or float type
     """
-    if not isinstance(div, (int, float)):
+    if not type(div) in (int, float):
         raise TypeError("div must be a number")
-        return matrix
-    elif div == 0:
+
+    if div == 0:
         raise ZeroDivisionError("division by zero")
-        return matrix
 
-    prevRowLen = -1
-    new_list = []
-    for row in matrix:
-        if (prevRowLen != len(row) and prevRowLen != -1):
-            raise TypeError("Each row of the matrix must have the same size")
-            return matrix
-        for ele in row:
-            if not isinstance(ele, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of" +
-                                " integers/floats")
-                return matrix
-            else:
-                new_list.append(round(ele / div, 2))
-        prevRowLen = len(row)
+    msg_type = "matrix must be a matrix (list of lists) of integers/floats"
 
-    return new_list
+    if not matrix or not isinstance(matrix, list):
+        raise TypeError(msg_type)
+
+    len_e = 0
+    msg_size = "Each row of the matrix must have the same size"
+
+    for elems in matrix:
+        if not elems or not isinstance(elems, list):
+            raise TypeError(msg_type)
+
+        if len_e != 0 and len(elems) != len_e:
+            raise TypeError(msg_size)
+
+        for num in elems:
+            if not type(num) in (int, float):
+                raise TypeError(msg_type)
+
+        len_e = len(elems)
+
+    m = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
+    return (m)

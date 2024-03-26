@@ -5,17 +5,16 @@ each of these characters: ., ? and :"""
 
 
 def text_indentation(text):
-    """
-    prints a string of text with 2 new lines after '.', '?', and ':'
-    unit tests located in tests/5-text_indentation.txt
-    """
-    if not isinstance(text, str):
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
-    string = ""
-    specials = ['.', '?', ':']
-    for ch in text:
-        string += ch
-        if ch in specials:
-            string += "\n\n"
-    print(string, end='')
+    s = text[:]
+
+    for d in ".?:":
+        list_text = s.split(d)
+        s = ""
+        for i in list_text:
+            i = i.strip(" ")
+            s = i + d if s is "" else s + "\n\n" + i + d
+
+    print(s[:-3], end="")

@@ -5,18 +5,17 @@
 """
 
 
-def number_of_lines(filename=""):
-    """ Function that reads from a file and prints its number of lines
+def write_file(filename="", text=""):
+    """Writes a string to a text file (UTF8) and returns the number
+    of characters written.
 
     Args:
-        filename: filename
+        filename (str, optional): name of the file. Defaults to "".
+        text (str, optional): string of text to write to file. Defaults to "".
 
-    Raises
-        Exception: when the file can be opened
-
+    Returns:
+        int: number of characters written to file.
     """
-    n_lines = 0
-    with open(filename, 'r', encoding="utf-8") as f:
-        for line in f:
-            n_lines += 1
-    return n_lines
+    with open(filename, 'w', encoding="utf-8") as f:
+        """This method returns the number of characters written to a file."""
+        return f.write(text)

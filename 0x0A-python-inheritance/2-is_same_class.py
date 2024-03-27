@@ -5,9 +5,14 @@ an instance of the specified class ; otherwise False"""
 
 
 def is_same_class(obj, a_class):
-    """checks if two objects are EXACTLY the same class
-        -> doesn't care about inheritance
+    """ Function that returns True/False if obj is a type of a_class
+
+    Args:
+        obj: object
+        a_class: class type
+
+    Returns:
+        True if type of obj is a_class
+        False, otherwise
     """
-    if not isinstance(a_class, type):
-        raise TypeError("a_class must be of type 'type'")
-    return (type(obj) is a_class)
+    return type(obj) is a_class

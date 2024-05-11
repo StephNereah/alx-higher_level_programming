@@ -1,15 +1,21 @@
 #!/usr/bin/python3
+"""Defines a class Base"""
+import json
+import os.path
+import csv
+import turtle
+
 
 class Base:
-    """Base class
-    Attributes:
-        __nb_objects: private class attribure
-        id (int): instance public attribute
     """
+    Base class for managing id attribute for all future classes.
+    """
+
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """class constructor
+        """
+        Initialize the Base class.
         Args:
             id (int): instance public attribute
         """

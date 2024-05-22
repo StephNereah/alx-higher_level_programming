@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-script that takes in a URL and an email, sends a POST request to the passed URL with the email as a parameter, and displays the body of the response.
+script that takes in a URL and an email, sends a POST
+request to the passed URL with the email as a parameter,
+and displays the body of the response.
 """
 import urllib.request
 import urllib.parse
@@ -17,5 +19,8 @@ if __name__ == "__main__":
     data = query_string.encode("ascii")
     req = urllib.request.Request(url, data)
     with urllib.request.urlopen(req) as response:
+        # If you do not pass the data argument, urllib uses a GET request.
+        # One way in which GET and POST requests differ is that POST requests
+        # often have "side-effects".
         response_text = response.read().decode("utf-8")
         print(response_text)
